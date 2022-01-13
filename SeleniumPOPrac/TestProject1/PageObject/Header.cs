@@ -25,6 +25,11 @@ namespace TestProject1.PageObject
         private By _searchLoopClick = By.Name("submit_search");
         //Women part
         private By _womenClick = By.XPath("//a[contains(text(),'Women')]");
+        private By _womenTshirt = By.XPath("//a[contains(text(),'T-shirts')]");
+        private By _womenBlouses = By.XPath("//a[contains(text(),'Blouses')]");
+        private By _womenSummerDress = By.XPath("//a[contains(text(),'Summer Dresses')]");
+        private By _womenEveningDress = By.XPath("//a[contains(text(),'Evening Dresses')]");
+        private By _womenCasualDresse = By.XPath("//a[contains(text(),'Casual Dresses')]");
         //Dresses part
         private By _dressesClick = By.XPath("(//a[contains(text(),'Dresses')])[5]");
         private By _casualDresses = By.XPath("(//a[contains(text(),'Casual Dresses')])[2]");
@@ -103,6 +108,56 @@ namespace TestProject1.PageObject
             IWebElement element = _driver.FindElement(_womenClick);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_womenClick).Click();
+
+            return new WomenPart(_driver);
+        }
+
+        public WomenPart WomenTshirtHover()
+        {
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_womenClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_womenTshirt).Click();
+
+            return new WomenPart(_driver);
+        }
+
+        public WomenPart WomenBlouseHover()
+        {
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_womenClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_womenBlouses).Click();
+
+            return new WomenPart(_driver);
+        }
+
+        public WomenPart WomenEveningDressHoverTest()
+        {
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_womenClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_womenEveningDress).Click();
+
+            return new WomenPart(_driver);
+        }
+
+        public WomenPart WomenCasualDressHoverTest()
+        {
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_womenClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_womenCasualDresse).Click();
+
+            return new WomenPart(_driver);
+        }
+
+        public WomenPart WomenSummerHoverTest()
+        {
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_womenClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_womenSummerDress).Click();
 
             return new WomenPart(_driver);
         }

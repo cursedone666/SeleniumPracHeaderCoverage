@@ -84,6 +84,51 @@ namespace TestProject1
         }
 
         [Fact]
+        public void WomenTshirtHoverTest()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.WomenTshirtHover();
+        }
+
+        [Fact]
+        public void WomenBlouseHoverTest()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.WomenBlouseHover();
+        }
+
+        [Fact]
+        public void WomenEvDressTest()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.WomenEveningDressHoverTest();
+        }
+
+        [Fact]
+        public void WomenSummerDressTest()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.WomenSummerHoverTest();
+        }
+
+        [Fact]
+        public void WomenCasualDressTest()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.WomenCasualDressHoverTest();
+        }
+
+        [Fact]
         public void DressesTest()
         {
             IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
