@@ -98,7 +98,34 @@ namespace TestProject1
             IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
             Header HeaderPart = new HomePage(driver);
 
-            HeaderPart.DressesHover();
+            HeaderPart.DressesHoverCheck();
+        }
+
+        [Fact]
+        public void CasualDressHover()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.CasualDressesHoverTest();
+        }
+
+        [Fact]
+        public void EveningDressHoverTest()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.EveningDressesHoverTest();
+        }
+
+        [Fact]
+        public void SummerlDressHoverTest()
+        {
+            IWebDriver driver = StartDriver("http://automationpractice.com/index.php");
+            Header HeaderPart = new HomePage(driver);
+
+            HeaderPart.SummerDressesHoverTest();
         }
 
         [Fact]

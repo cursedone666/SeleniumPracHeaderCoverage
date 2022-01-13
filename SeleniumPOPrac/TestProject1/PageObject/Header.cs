@@ -27,6 +27,9 @@ namespace TestProject1.PageObject
         private By _womenClick = By.XPath("//a[contains(text(),'Women')]");
         //Dresses part
         private By _dressesClick = By.XPath("(//a[contains(text(),'Dresses')])[5]");
+        private By _casualDresses = By.XPath("(//a[contains(text(),'Casual Dresses')])[2]");
+        private By _eveningDresses = By.XPath("(//a[contains(text(),'Evening Dresses')])[2]");
+        private By _summerDresses = By.XPath("(//a[contains(text(),'Summer Dresses')])[2]");
         //T-shirts part
         private By _tShirtClick = By.XPath("(//a[contains(text(),'T-shirts')])[2]");
         //Cart part
@@ -110,12 +113,41 @@ namespace TestProject1.PageObject
             return new DressesPart(_driver);
         }
 
-        public DressesPart DressesHover()
+        public DressesPart DressesHoverCheck()
         {
             Actions act = new Actions(_driver);
             IWebElement element = _driver.FindElement(_dressesClick);
             act.MoveToElement(element).Perform();
             _driver.FindElement(_dressesClick).Click();
+            return new DressesPart(_driver);
+        }
+
+        public DressesPart EveningDressesHoverTest()
+        {
+            
+
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_dressesClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_eveningDresses).Click();
+            return new DressesPart(_driver);
+        }
+
+        public DressesPart SummerDressesHoverTest()
+        {
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_dressesClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_summerDresses).Click();
+            return new DressesPart(_driver);
+        }
+
+        public DressesPart CasualDressesHoverTest()
+        {
+            Actions act = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_dressesClick);
+            act.MoveToElement(element).Perform();
+            _driver.FindElement(_casualDresses).Click();
             return new DressesPart(_driver);
         }
 
